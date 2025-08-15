@@ -7,7 +7,7 @@ services:
     volumes:
       - .:/app  # Mount the current directory into /app in the container
     environment:
-      - NODE_ENV=development  # Set environment variable for Node.js application
+      - NODE_ENV=development  # Set environment variable for Node.js application  
   mongo:
     image: mongo  # Use the official MongoDB image
     ports:
