@@ -1,0 +1,13 @@
+{
+  "name": "version-control",
+  "version": "1.0.0",
+  "description": "Một dự án mẫu giúp người phát triển hiểu rõ về cách áp dụng kiến trúc Microservices trong kiểm soát phiên bản phần mềm.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.10.9"
+  }
+}
