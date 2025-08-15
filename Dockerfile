@@ -1,4 +1,4 @@
-FROM node:16
+FROM node:18
 # Thiết lập thư mục làm việc bên trong container
 WORKDIR /app
 # Sao chép package.json và package-lock.json vào thư mục làm việc
@@ -7,7 +7,7 @@ COPY package*.json ./
 RUN npm install
 # Sao chép các tệp ứng dụng còn lại vào thư mục làm việc
 COPY . .
-# Mở cổng 3000 ra bên ngoài
+# Mở cổng 3000 ra bên ngoài để ứng dụng có thể truy cập từ bên ngoài
 EXPOSE 3000
-# Lệnh để chạy ứng dụng
+# Lệnh để chạy ứng dụng chính
 CMD ["node", "app.js"]
