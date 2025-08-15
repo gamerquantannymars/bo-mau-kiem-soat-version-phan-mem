@@ -1,4 +1,4 @@
-FROM node:14
+FROM node:16
 # Thiết lập thư mục làm việc bên trong container
 WORKDIR /app
 # Sao chép package.json và package-lock.json vào thư mục làm việc
