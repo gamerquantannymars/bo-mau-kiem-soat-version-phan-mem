@@ -1,13 +1,13 @@
 FROM node:14
-# Set the working directory inside the container
+# Thiết lập thư mục làm việc bên trong container
 WORKDIR /app
-# Copy package.json and package-lock.json to the working directory
+# Sao chép package.json và package-lock.json vào thư mục làm việc
 COPY package*.json ./
-# Install dependencies defined in package.json
+# Cài đặt các phụ thuộc được định nghĩa trong package.json
 RUN npm install
-# Copy the rest of the application files to the working directory
+# Sao chép các tệp ứng dụng còn lại vào thư mục làm việc
 COPY . .
-# Expose port 3000 to the outside
+# Mở cổng 3000 ra bên ngoài
 EXPOSE 3000
-# Command to run the application
+# Lệnh để chạy ứng dụng
 CMD ["node", "app.js"]
