@@ -1,19 +1,19 @@
 version: '3'
 services:
   app:
-    build: .
+    build: .  # Build the app from Dockerfile in the current directory
     ports:
-      - '3000:3000'
+      - '3000:3000'  # Expose port 3000 to the host
     volumes:
-      - .:/app
+      - .:/app  # Mount the current directory into /app in the container
     environment:
-      - NODE_ENV=development
+      - NODE_ENV=development  # Set environment variable for Node.js application
   mongo:
-    image: mongo
+    image: mongo  # Use the official MongoDB image
     ports:
-      - '27017:27017'
+      - '27017:27017'  # Expose port 27017 to the host
     volumes:
-      - mongo-data:/data/db
+      - mongo-data:/data/db  # Persist MongoDB data in a named volume
 
 volumes:
-  mongo-data:
+  mongo-data:  # Define a named volume for MongoDB data persistence
